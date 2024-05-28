@@ -30,7 +30,22 @@ npm run start:dev
 http://localhost:3000/api/v2/seed
 ```
 
+# Production Build
+1. Crear el archivo ```.env.prod```
+2. Llenar las variables de entorno para la producción
+3. Crear la nueva imagen 
+ ```
+ docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+ ```
+
+Puedes correr el contenedor luego del build también de esta forma:
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up
+```
 
 ## Stack usado
-* MongoDD
-* NestJs
+
+<p align="left">
+  <img src="https://www.svgrepo.com/show/331488/mongodb.svg" width="30" alt="MongoDB Logo" />
+  <img src="https://nestjs.com/img/logo-small.svg" width="30" alt="NestJs Logo" />
+  </p>
